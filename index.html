@@ -6,28 +6,72 @@
   	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  	<h1>Persioqq</h1>
+  	<h1>Persioqq (Henrique)</h1>
   	<hr>
+  	<p>My Linkedin: <a href="www.linkedin.com/in/henrique-surian-stobbe-9a4942332" target="_blank">www.linkedin.com/in/henrique-surian-stobbe-9a4942332</a></p>
   	<p>My GitHub: <a href="https://github.com/Persioqq" target="_blank">https://github.com/Persioqq</a></p>
   	<hr>
 	<h2>Projects</h2>
 	<ul>
+		<li><a href="#qcsv">qcsv</a></li>
 		<li><a href="#qpost">qpost</a></li>
+		<li><a href="#qbuild">qbuild</a></li>
 		<li><a href="#qls">qls</a></li>
 		<li><a href="#qfetch">qfetch</a></li>
+		<li><a href="#qcalc">qcalc</a></li>
 	</ul>
 	<hr>
+	<h2 id='qcsv'>qcsv</h2>
+	<p>
+A simple C++ CSV reader. Inspired by Python Pandas.</p>
+	<p><strong>Example:</strong></p>
+	<p>For a better example, see the github page.</p>
+	<pre>
+QCsv::ReadCsvFile("example.csv"); // read csv file
+QCsv::PrintDf(); // print the DataFrame
+QCsv::WriteCsv("example.csv"); // write the changes of DataFrame
+QCsv::convertAVectorToStringVector(vector);
+// a misc utility fucntion to transform vectors.
+
+QCsv::headers[]; // a vector with the DataFrame headers
+
+QCsv::df["header"];
+// A map that have the DataFrame structure, like python pandas.
+// The example above returns the series that is a string vector.
+	</pre>
+	<hr>
 	<h2 id='qpost'>qpost</h2>
-	<p>A micro post utility</p>
-	<p><strong>Examples:</strong></p>
+	<p>A micro post utility.</p>
+	<p><strong>Example:</strong></p>
 	<pre>
 qpost get 127.0.0.1:8080/countries
 qpost post 127.0.0.1:8080/countries '{"Name": "USA", "Language": "English"}'
 	</pre>
 	<hr>
+		<h2 id='qbuild'>qbuild</h2>
+	<p>A simple lua script to make the basic, but better.</p>
+	<p><strong>Example:</strong></p>
+	<pre>
+lua qbuild.lua build
+               clean
+               run
+               buildrun
+	</pre>
+	<pre>
+qbuild = {
+    compiler = "g++",
+    lang_std = "-std=c++17",
+    compiler_flags = "-Wall -Wextra -g -O3 -pipe -march=native",
+    include_path = "-I\"./libs/\"",
+    src_files = "./src/*.cpp ./src/Game/*.cpp",
+    linker_flags = "-lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -llua5.4",
+    obj_name = "qengine",
+}
+	</pre>
+	<hr>
 	<h2 id='qls'>qls</h2>
-	<p>A ls clone, but is two times more faster.</p>
-	<p><strong>Examples:</strong></p>
+	<p>A ls clone, but its two times more faster.</p>
+	<p><strong>Example:</strong></p>
 	<pre>
 $ qls /
 
@@ -40,7 +84,7 @@ $ qls /
 	<hr>
 	<h2 id='qfetch'>qfetch</h2>
 	<p>A fetch, like any other.</p>
-	<p><strong>Examples:</strong></p>
+	<p><strong>Example:</strong></p>
 	<pre>
  ___ 	___________________
 |   |	system   => Linux
@@ -52,15 +96,16 @@ $ qls /
 	<hr>
 	<h2 id='qcalc'>qcalc</h2>
 	<p>A calculator made with the python eval() function.</p>
-	<p><strong>Examples:</strong></p>
+	<p><strong>Example:</strong></p>
 	<pre>
-[0]> 2+2
-4
+[0]> 2+2*((3+2)/2)
+7.0
 [1]> exit
 	</pre>
 	<hr>
 	<p>Contact: henriquesstobbe@gmail.com</p>
+	<p>Bitcoin address: bc1q26xvdv00hpca02v5nv86yft62jyvxu7s9z7yze</p>
   	<hr>
-  	<font size="-1">Last update: 2/7/2022</font>
+  	<font size="-1">Last update: 23/2/2025</font>
 </body>
 </html>
