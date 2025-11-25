@@ -10,9 +10,14 @@
   	<hr>
   	<p>My Linkedin: <a href="https://www.linkedin.com/in/henrique-surian-stobbe-9a4942332" target="_blank">https://www.linkedin.com/in/henrique-surian-stobbe-9a4942332</a></p>
   	<p>My GitHub: <a href="https://github.com/Persioqq" target="_blank">https://github.com/Persioqq</a></p>
+	
   	<hr>
+	<h2>About me</h2>
+	<p>Hello! I am Henrique from Brazil! I started to code when I was 11 years old by the curiosity and by the fun of building things. Currently I am finishing the high school and preparing for the university. I like science, literature, journalism and technology.</p>
+	<hr>
 	<h2>Projects</h2>
 	<ul>
+	        <li><a href="#qchat">qchat</a></li>
 		<li><a href="#qcsv">qcsv</a></li>
 		<li><a href="#qpost">qpost</a></li>
 		<li><a href="#qbuild">qbuild</a></li>
@@ -20,6 +25,26 @@
 		<li><a href="#qfetch">qfetch</a></li>
 		<li><a href="#qcalc">qcalc</a></li>
 	</ul>
+	<hr>
+	<h2 id='qchat'>qchat</h2>
+	<p>
+QChat is a simplier way to use the OpenAI's API for interacting with the models easily and for developing small agents.</p>
+	<p><strong>Example:</strong></p>
+	<pre>
+from qchat import QChat
+
+chat = QChat('secret',
+             'https://chat.maritaca.ai/api',
+             'sabiazinho-3', 12000)
+
+chat.add_system_role('Show the factorial of the number which the user will request.')
+chat.add_user_question('5')
+chat.add_assistant_response('120')
+chat.add_user_question('What is the result that you have just shown?')
+chat.complete()
+
+print(chat) # This will show the entire chat!
+	</pre>
 	<hr>
 	<h2 id='qcsv'>qcsv</h2>
 	<p>
@@ -106,6 +131,6 @@ $ qls /
 	<p>Contact: henriquesstobbe@gmail.com</p>
 	<p>Bitcoin address: bc1q26xvdv00hpca02v5nv86yft62jyvxu7s9z7yze</p>
   	<hr>
-  	<font size="-1">Last update: 23/2/2025</font>
+  	<font size="-1">Last update: 25/11/2025</font>
 </body>
 </html>
