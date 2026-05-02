@@ -1,4 +1,4 @@
 # persioqq.github.io
 
-My personal site.
+My personal website.
 

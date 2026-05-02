@@ -2,15 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-  	<title>Persioqq</title>
+  	<title>Persioqq (Henrique)</title>
   	<link rel="stylesheet" href="style.css">
 </head>
 <body>
   	<h1>Persioqq (Henrique)</h1>
   	<hr>
-  	<p>My Linkedin: <a href="https://www.linkedin.com/in/henrique-surian-stobbe-9a4942332" target="_blank">https://www.linkedin.com/in/henrique-surian-stobbe-9a4942332</a></p>
-  	<p>My GitHub: <a href="https://github.com/Persioqq" target="_blank">https://github.com/Persioqq</a></p>
-	
+  	<p>Linkedin: <a href="https://www.linkedin.com/in/henrique-surian-stobbe" target="_blank">www.linkedin.com/in/henrique-surian-stobbe</a></p>
+  	<p>GitHub: <a href="https://github.com/Persioqq" target="_blank">github.com/Persioqq</a></p>
+  	<p>Email: <a href="mailto:henriquesstobbe@gmail.com">henriquesstobbe@gmail.com</a></p>
   	<hr>
 	<h2>About me</h2>
 	<p>Hello! I am Henrique from Brazil! I started to code when I was 11 years old by the curiosity and by the fun of building things. Currently I am finishing the high school and preparing for the university. I like science, literature, journalism and technology.</p>
@@ -24,23 +24,23 @@
 		<li><a href="#qls">qls</a></li>
 		<li><a href="#qfetch">qfetch</a></li>
 		<li><a href="#qcalc">qcalc</a></li>
+		<li><a href="#other_contacts">Other contacts</a></li>
 	</ul>
 	<hr>
 	<h2 id='qchat'>qchat</h2>
-	<p>
-QChat is a simpler way to use the OpenAI's, Ollama's and Maritaca AI's APIs for interacting with the models easily and for developing small agents.</p>
+	<p>QChat is a simpler way to use the OpenAI's, Ollama's and Maritaca AI's APIs for interacting with the models easily and for developing small agents.</p>
 	<p><strong>Example:</strong></p>
 	<pre>
 from qchat import MaritacaAI
 
 chat = MaritacaAI('secret',
              'https://chat.maritaca.ai/api',
-             'sabiazinho-3', 12000)
+             'sabiazinho-4', 12000)
 
-chat.add_system_role('Show the factorial of the number which the user will request.')
+chat.add_system_role('Show the factorial from the number which the user will request.')
 chat.add_user_question('5')
 chat.add_assistant_response('120')
-chat.add_user_question('What is the result that you have just shown?')
+chat.add_user_question('What is the result of what you have just shown?')
 chat.complete()
 
 print(chat) # This will show the entire chat!
@@ -73,7 +73,7 @@ qpost get 127.0.0.1:8080/countries
 qpost post 127.0.0.1:8080/countries '{"Name": "USA", "Language": "English"}'
 	</pre>
 	<hr>
-		<h2 id='qbuild'>qbuild</h2>
+	<h2 id='qbuild'>qbuild</h2>
 	<p>A simple lua script to make the basic, but better.</p>
 	<p><strong>Example:</strong></p>
 	<pre>
@@ -128,9 +128,11 @@ $ qls /
 [1]> exit
 	</pre>
 	<hr>
-	<p>Contact: henriquesstobbe@gmail.com</p>
+	<h2 id='other_contacts'>Other contacts</h2>
+	<p>Contact: <a href="mailto:henriquesstobbe@gmail.com">henriquesstobbe@gmail.com</a></p>
+	<p><a href="./henrique_public.gpg">Public PGP key</a></p>
 	<p>Bitcoin address: bc1q26xvdv00hpca02v5nv86yft62jyvxu7s9z7yze</p>
   	<hr>
-  	<font size="-1">Last update: 25/11/2025</font>
+  	<font size="-1">Last update: 01/05/2026 | dd/mm/yyyy</font>
 </body>
 </html>
