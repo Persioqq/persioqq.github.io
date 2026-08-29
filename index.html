@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-  	<title>Persioqq (Henrique)</title>
+  	<title>Henrique Surian Stobbe</title>
   	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  	<h1>Persioqq (Henrique)</h1>
+  	<h1>Henrique Surian Stobbe</h1>
   	<hr>
   	<p>Linkedin: <a href="https://www.linkedin.com/in/henrique-surian-stobbe" target="_blank">www.linkedin.com/in/henrique-surian-stobbe</a></p>
   	<p>GitHub: <a href="https://github.com/Persioqq" target="_blank">github.com/Persioqq</a></p>
@@ -17,6 +17,7 @@
 	<hr>
 	<h2>Projects</h2>
 	<ul>
+	        <li><a href="#util-linux">util-linux</a></li>
 	        <li><a href="#qchat">qchat</a></li>
 		<li><a href="#qcsv">qcsv</a></li>
 		<li><a href="#qpost">qpost</a></li>
@@ -27,10 +28,49 @@
 		<li><a href="#other_contacts">Other contacts</a></li>
 	</ul>
 	<hr>
+	<h2 id='util-linux'>util-linux</h2>
+	<p>I contributed to util-linux's fdisk and sfdisk, which are part of the Linux ecosystem, in 2026. The main change was the automatic recommendation of GPT (GUID Partition Table) on modern EFI systems when running these tools in interactive mode, otherwise they recommend DOS or SUN (on SPARC). And I also fixed a small inconsistency on -t/--type flag. See my GitHub for more details. These modifications will be included in util-linux v2.43 release.</p>
+	<p><strong>Example:</strong></p>
+	<p>Note: both (fdisk and sfdisk) were defaulting to DOS on a EFI system.</p>
+<pre>
+$ sudo ./fdisk /dev/sda
+
+Welcome to fdisk (util-linux 2.43.devel-1026-0f119-dirty).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new GPT disklabel (GUID: 5B4DA203-8C43-4C13-B609-2B4442D557A9).
+
+Command (m for help):
+
+$ sudo ./sfdisk /dev/sda    
+
+Welcome to sfdisk (util-linux 2.43-devel).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Checking that no-one is using this disk right now ... OK
+
+Disk /dev/sda: 3.76 GiB, 4037017600 bytes, 7884800 sectors
+Disk model: Flash Disk      
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+sfdisk is going to create a new 'gpt' disk label.
+Use 'label: <name>' before you define a first partition
+to override the default.
+
+Type 'help' to get more information.
+
+>>>
+</pre>
+	<hr>
 	<h2 id='qchat'>qchat</h2>
 	<p>QChat is a simpler way to use the OpenAI's, Ollama's and Maritaca AI's APIs for interacting with the models easily and for developing small agents.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
 from qchat import MaritacaAI
 
 chat = MaritacaAI('secret',
@@ -44,14 +84,14 @@ chat.add_user_question('What is the result of what you have just shown?')
 chat.complete()
 
 print(chat) # This will show the entire chat!
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qcsv'>qcsv</h2>
 	<p>
 A simple C++ CSV reader. Inspired by Python Pandas.</p>
 	<p><strong>Example:</strong></p>
 	<p>For a better example, see the github page.</p>
-	<pre>
+<pre>
 QCsv::ReadCsvFile("example.csv"); // read csv file
 QCsv::PrintDf(); // print the DataFrame
 QCsv::WriteCsv("example.csv"); // write the changes of DataFrame
@@ -63,26 +103,26 @@ QCsv::headers[]; // a vector with the DataFrame headers
 QCsv::df["header"];
 // A map that have the DataFrame structure, like python pandas.
 // The example above returns the series that is a string vector.
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qpost'>qpost</h2>
 	<p>A micro post utility.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
 qpost get 127.0.0.1:8080/countries
 qpost post 127.0.0.1:8080/countries '{"Name": "USA", "Language": "English"}'
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qbuild'>qbuild</h2>
 	<p>A simple lua script to make the basic, but better.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
 lua qbuild.lua build
                clean
                run
                buildrun
-	</pre>
-	<pre>
+</pre>
+<pre>
 qbuild = {
     compiler = "g++",
     lang_std = "-std=c++17",
@@ -92,12 +132,12 @@ qbuild = {
     linker_flags = "-lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -llua5.4",
     obj_name = "qengine",
 }
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qls'>qls</h2>
 	<p>A ls clone, but its two times more faster.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
 $ qls /
 
  root          4096 Sat Sep 25 15:44:05 2021 usr
@@ -105,28 +145,28 @@ $ qls /
  root          4096 Tue Sep 26 00:09:39 2006 mnt
  root          4096 Mon Feb  7 11:36:42 2022 root
 ...
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qfetch'>qfetch</h2>
 	<p>A fetch, like any other.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
  ___ 	___________________
 |   |	system   => Linux
 | | |	hostname => pi.org
 | \/ /	kernel   => 5.15.19
 |   /	arch     => x86_64
  \ /	___________________
-	</pre>
+</pre>
 	<hr>
 	<h2 id='qcalc'>qcalc</h2>
 	<p>A calculator made with the python eval() function.</p>
 	<p><strong>Example:</strong></p>
-	<pre>
+<pre>
 [0]> 2+2*((3+2)/2)
 7.0
 [1]> exit
-	</pre>
+</pre>
 	<hr>
 	<h2 id='other_contacts'>Other contacts</h2>
 	<p>Contact: <a href="mailto:henriquesstobbe@gmail.com">henriquesstobbe@gmail.com</a></p>
