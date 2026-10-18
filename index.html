@@ -21,6 +21,7 @@
 	        <li><a href="#qchat">qchat</a></li>
 		<li><a href="#qcsv">qcsv</a></li>
 		<li><a href="#qpost">qpost</a></li>
+		<li><a href="#qmatrix">qmatrix</a></li>
 		<li><a href="#qbuild">qbuild</a></li>
 		<li><a href="#qls">qls</a></li>
 		<li><a href="#qfetch">qfetch</a></li>
@@ -111,6 +112,17 @@ QCsv::df["header"];
 <pre>
 qpost get 127.0.0.1:8080/countries
 qpost post 127.0.0.1:8080/countries '{"Name": "USA", "Language": "English"}'
+</pre>
+<hr>
+<h2 id='qmatrix'>qmatrix</h2>
+	<p>qmatrix is a simple matrix implementation for C. It includes matrix adition, subtration, multiplication, exponentiation and filling.</p>
+	<p><strong>Example:</strong></p>
+<pre>
+qmatrix *matrix = new_m(10, 10); // This creates a 10x10 matrix
+fill_m_with_c(matrix); // This fills the matrix with crescent numbers
+matrix->m[0][0] = 33 // Changes the first element to 33
+matrix = mul_m(matrix, matrix); // Multiplies itself
+print_m(matrix); // Prints the matrix
 </pre>
 	<hr>
 	<h2 id='qbuild'>qbuild</h2>
